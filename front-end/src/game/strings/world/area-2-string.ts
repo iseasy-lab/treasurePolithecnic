@@ -1,0 +1,16 @@
+export const enum Area2LocationElement {
+    AREA_2_BACKGROUND = 'area-2-background',
+    WORLD_BUTTON = 'world-button',
+    TOTAL_SCORE = 'total-score',
+    LOCATION_1 = 'location-1',
+    LOCATION_2 = 'location-2',
+    LOCATION_3 = 'location-3',
+    LOCATION_4 = 'location-4',
+    LOCATION_5 = 'location-5',
+    LOCATION_6 = 'location-6',
+    LOCATION_7 = 'location-7',
+    LOCATION_8 = 'location-8',
+    LOCATION_9 = 'location-9',
+    MAP_AREA_ASSISTANT = 'map-area-assistant',
+    CONTINUE_LOCATION_BUTTON = 'continue-location-button',
+}

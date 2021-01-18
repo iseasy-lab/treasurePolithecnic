@@ -1,0 +1,136 @@
+import { GameElementSpecificationsInterface } from 'src/game/interfaces/game-element-specifications-interface';
+import { gameSceneScale, titleBarSceneScale } from 'src/game/strings/global-elements/game-elements-specifications';
+import { GameFontStylesString, ColorsString, AlingString, textFontSize } from 'src/game/strings/font-styles';
+
+export const avatarSelectionSceneElementsSpecifications: GameElementSpecificationsInterface[] = [
+    {
+        type: 'image',
+        element: 'background',
+        assetName: 'base-scene-background',
+        name: 'base-scene-background',
+        scale: gameSceneScale
+    },
+    {
+        type: 'interactiveObject',
+        element: 'center-button',
+        // assetName: 'title-bar-background',
+        name: 'scene-title-bar',
+        content: 'ELIGE TU AVATAR',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: textFontSize.Big.fontSize,
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 1366,
+            objectHeight: 100,
+            objectPositionX: 683,
+            objectPositionY: 60,
+        }
+    },
+    {
+        type: 'interactiveObject',
+        element: 'button',
+        assetName: 'return-icon-background',
+        name: 'return-button',
+        content: 'ATRÁS',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: textFontSize.Small.fontSize,
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 146,
+            objectHeight: 76,
+            objectPositionX: 127,
+            objectPositionY: 62,
+        },
+    },
+    {
+        type: 'interactiveObject',
+        element: 'bottom-title-button',
+        assetName: 'boy-avatar-background',
+        name: 'boy-avatar',
+        content: 'CHICO',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: textFontSize.Regular.strokeThickness,
+            fontSize: textFontSize.Regular.fontSize,
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 300,
+            objectHeight: 428,
+            objectPositionX: 433,
+            objectPositionY: 375,
+        },
+    },
+    {
+        type: 'interactiveObject',
+        element: 'bottom-title-button',
+        assetName: 'girl-avatar-background',
+        name: 'girl-avatar',
+        content: 'CHICA',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: textFontSize.Regular.strokeThickness,
+            fontSize: textFontSize.Regular.fontSize,
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 300,
+            objectHeight: 428,
+            objectPositionX: 933,
+            objectPositionY: 375,
+        },
+    },
+    {
+        type: 'image',
+        element: 'background',
+        assetName: 'avatar-selection-card-background',
+        name: 'avatar-selector',
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 327,
+            objectHeight: 480,
+            objectPositionX: 445,
+            objectPositionY: 370,
+        },
+    },
+    {
+        type: 'interactiveObject',
+        element: 'simple-button',
+        assetName: 'sign-out-button-background',
+        name: 'continue-button',
+        content: 'CONTINUAR',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.RED_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: textFontSize.Regular.fontSize,
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 330,
+            objectHeight: 90,
+            objectPositionX: 684,
+            objectPositionY: 684,
+        },
+    },
+]

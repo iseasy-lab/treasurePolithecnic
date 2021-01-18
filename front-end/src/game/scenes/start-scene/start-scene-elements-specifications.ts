@@ -1,0 +1,95 @@
+import { GameElementSpecificationsInterface } from 'src/game/interfaces/game-element-specifications-interface';
+import { GameFontStylesString, AlingString, ColorsString, textFontSize } from 'src/game/strings/font-styles';
+import { gameTitleGameSpecifications, globalInfoButtonSpecifications, globalScoreButtonSpecifications, iconButtonScale, baseSceneBackground} from 'src/game/strings/global-elements/game-elements-specifications';
+
+export const startSceneElementsSpecifications: GameElementSpecificationsInterface[] = [
+    baseSceneBackground,
+    gameTitleGameSpecifications,
+    {
+        type: 'text',
+        element: 'note',
+        name: 'scene-note',
+        content: 'INGRESA COMO:',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: textFontSize.Small.fontSize,
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 350,
+            objectHeight: 40,
+            objectPositionX: 683,
+            objectPositionY: 340,
+        },
+    },
+    {
+        type: 'interactiveObject',
+        element: 'simple-button',
+        assetName: 'epn-button-background',
+        name: 'epn-button',
+        content: 'MIEMBRO EPN',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: textFontSize.Big.fontSize,
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 615,
+            objectHeight: 140,
+            objectPositionX: 683,
+            objectPositionY: 460,
+        },
+    },
+    {
+        type: 'interactiveObject',
+        element: 'simple-button',
+        assetName: 'guest-button-background',
+        name: 'guest-button',
+        content: 'INVITADO',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.WHITE_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            fontSize: textFontSize.Big.fontSize,
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: 500,
+            objectHeight: 140,
+            objectPositionX: 683,
+            objectPositionY: 625,
+        },
+    },
+    globalScoreButtonSpecifications,
+    globalInfoButtonSpecifications,
+    {
+        type: 'interactiveObject',
+        element: 'bottom-title-button',
+        assetName: 'on-sound-icon-background',
+        name: 'sound-button',
+        content: 'SONIDO',
+        style: {
+            fontFamily: GameFontStylesString.BASE_FONT,
+            color: ColorsString.BLACK_HEXADECIMAL_STRING,
+            align: AlingString.CENTER_STRING,
+            stroke: ColorsString.WHITE_HEXADECIMAL_STRING,
+            strokeThickness: textFontSize.Small.strokeThickness,
+            fontSize: textFontSize.Small.fontSize,
+        },
+        scale: {
+            objectWidthRatio: 1,
+            objectHeightRatio: 1,
+            objectWidth: iconButtonScale.objectWidth,
+            objectHeight: iconButtonScale.objectHeight,
+            objectPositionX: 1258,
+            objectPositionY: 654,
+        },
+    },
+]

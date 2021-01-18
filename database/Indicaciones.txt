@@ -1,0 +1,20 @@
+-----------------------------------------------------------------------------------
+Para que el videojuego se ejecute correctamente, aparte de configurar las claves
+de acceso del api de Firebase, se requiere activar la base de datos:
+
+	Firebase Realtime Database
+	y Firebase Authentication
+
+tanto para la autenticación de usuarios como para el almacenamiento
+de los registros de los usuarios.
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+Además, para usar la base de datos Firebase sin problemas,
+se debe importar el archivo:
+
+	default-db.json
+
+y así configurar la estructura principal de la base de datos.
+-----------------------------------------------------------------------------------
+By: Desarrollador
+-----------------------------------------------------------------------------------

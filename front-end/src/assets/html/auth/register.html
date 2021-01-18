@@ -1,0 +1,186 @@
+<style>
+
+    .formulario {
+        background: #fff;
+        padding-bottom: 8px;
+    }
+
+    .contenedor{
+        width: 100%;
+        align-items: center;
+        align-content: center;
+    }
+
+    .icon{
+        min-width: 7%;
+        text-align: center;
+        color: #999;
+    }
+
+    label {
+        font-size: 18px;
+        width: 40%;
+        font-family: sans-serif;
+        color: dimgray;
+    }
+    
+    select {
+        background-color: #fff;
+        font-size: 17px;
+        width: 40%;
+        padding: 8px;
+        border: none;
+        box-sizing: border-box;
+        margin: 5px;
+        border: 1px solid #aaa;
+        font-family: sans-serif;
+        border-radius: 5px;
+    }
+
+    .select{
+        width: 98%;
+        text-align: center;
+    }
+
+    .select-item:hover {
+        background-color: lightgrey;
+        color: black;
+    }
+
+    input:required {
+        background: white;
+        font-size: 22px;
+        width: 88%;
+        padding: 6px;
+        
+        box-sizing: border-box;
+
+        margin-bottom: 8px;
+        border: 1px solid #aaa;
+        font-family: sans-serif;
+    }
+
+    input:valid {
+        border: 2px solid #3CBC8D;
+        border-radius: 5px;
+    }
+
+    input:focus:invalid {
+        border: 3px solid tomato;
+    }
+
+    input:focus:valid {
+        border: 4px solid #3CBC8D;
+    }
+
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        width: 50%;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding: 15px;
+        margin: 8px;
+        font-size: 26px;
+        font-weight: 700;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        outline: none;
+    }
+
+    .button:hover {background-color: #3e8e41}
+
+    .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 9px #666;
+        transform: translateY(4px);
+    }
+    
+    .restore-password {
+        color: darkgreen;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+    
+    .restore-password:hover {
+        color: tomato;
+    }
+
+    .register-form-note {
+        font-size: 16px;
+        color: tomato;
+        align-items: center;
+    }
+
+</style>
+
+<body>
+    <form class="formulario" id='register-form' >
+        <div class="contenedor">
+            <div style="text-align: center;">
+                <label style="font-size: 30px; color: black; font-weight: 600; padding: 2px;">REGISTRO DE MIEMBROS EPN</label>
+            </div>
+            <div id='register-note' style="text-align: center; padding-bottom: 5px; visibility: hidden">
+                <label 
+                    class="register-form-note"
+                    id="register-form-note"
+                >
+                * Complete todos los campos del formulario
+                </label>
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="register-first-name" id="register-first-name" placeholder="Primer Nombre, p.ej.: Jonathan" required pattern="[A-ZÁÉÍÓÚÑáéíóúñ][a-záéíóúñ]+" title = "El nombre no debe incluir espacios, ni signos, unicamente letras y la primera letra con mayúscula (Ej.: Jonathan)"/>
+            </div>
+            
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="register-last-name" id="register-last-name" placeholder="Primer Apellido, p.ej.: Caiza" required pattern="[A-ZÁÉÍÓÚÑáéíóúñ][a-záéíóúñ]+" title = "El apellido no debe incluir espacios, ni signos, unicamente letras y la primera letra con mayúscula (Ej.: Caiza)"/>
+            </div>
+
+            <div class="input-contenedor">
+                <i class="fas fa-envelope icon"></i>
+                <input type="text" name="register-email" id="register-email" placeholder="Correo Institucional de la EPN, p.ej.: nombre.apellido@epn.edu.ec" required pattern="[a-zñ]+\.[a-zñ]+(0[1-9])?@epn\.edu\.ec" title = "Correo Institucional de la EPN (Ej.: nombre.apellido@epn.edu.ec)" />
+            </div>
+            
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" name="register-password" id="register-password" placeholder="Contraseña (min. 6 caracteres)" minlength="6" required  title = "La contraseña debe tener mínimo 6 caracteres" />
+            </div>
+            
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password" name="register-password-confirmed" id="register-password-confirmed" act placeholder="Confirmar Contraseña" minlength="6" equalTo="register-password" required title = "La contraseña debe ser igual a la anterior" />
+            </div>
+        </div>
+        <div class="select">
+            <label>Perteneciente a:</label>
+            <select class="select-item" name="register-memberOf" id="register-memberOf" placeholder="Mimbro de">
+                <option value="Administrativo EPN">Administrativo EPN</option>
+                <option value="Ciencias">Ciencias</option>
+                <option value="Ciencias Administrativas">Ciencias Administrativas</option>
+                <option value="ESFOT">ESFOT</option>
+                <option value="Formación Básica">Formación Básica</option>
+                <option value="Geología y Petroleos">Geología y Petroleos</option>
+                <option value="Ingeniería Civil y Ambiental">Ingeniería Civil y Ambiental</option>
+                <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                <option value="Ingeniería Eléctrica y Electrónica">Ingeniería Eléctrica y Electrónica</option>
+                <option value="Ingeniería Mecánica">Ingeniería Mecánica</option>
+                <option value="Ingeniería Química y Agroindustria">Ingeniería Química y Agroindustria</option>
+            </select>
+        </div>
+        <div class="select">
+            <label>Como un:</label>
+            <select class="select-item" name="register-relationshipEpn" id="register-relationshipEpn" placeholder="Tipo de miembro Politécnico">
+                <option value="Administrativo">Administrativo</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="Profesor">Profesor</option>
+            </select>
+        </div>
+        <div class="select">
+            <button class="button" name='register-button' id='register-button' type='submit' >Registrar</button>
+        </div>
+    </form>
+</body>

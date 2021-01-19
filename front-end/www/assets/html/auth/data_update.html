@@ -1,0 +1,202 @@
+<style>
+    
+    .formulario {
+        background: #fff;
+        padding: 10px;
+        padding-bottom: 15px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #1a2537;
+        font-size: 34px;
+        padding-bottom: 17px;
+    }
+
+    .contenedor{
+        width: 100%;
+        align-items: center;
+        align-content: center;
+    }
+
+    .icon{
+        min-width: 7%;
+        text-align: center;
+        color: #999;
+    }
+
+    label {
+        font-size: 22px;
+        width: 40%;
+        padding: 10px;
+        font-family: sans-serif;
+        color: dimgray;
+    }
+    
+    select {
+        background-color: #fff;
+        font-size: 18px;
+        width: 40%;
+        padding: 10px;
+        border: none;
+        box-sizing: border-box;
+        margin: 7px;
+        border: 1px solid #aaa;
+        font-family: sans-serif;
+        border-radius: 5px;
+    }
+
+    .select{
+        width: 98%;
+        text-align: center;
+    }
+
+    .select-item:hover {
+        background-color: lightgrey;
+        color: black;
+    }
+
+    input:required {
+        background: white;
+        font-size: 24px;
+        width: 88%;
+        padding: 7px;
+        
+        box-sizing: border-box;
+
+        margin-bottom: 10px;
+        border: 1px solid #aaa;
+        font-family: sans-serif;
+    }
+
+    input:valid {
+        border: 2px solid #3CBC8D;
+        border-radius: 5px;
+    }
+
+    input:focus:invalid {
+        border: 3px solid tomato;
+    }
+
+    input:focus:valid {
+        border: 4px solid #3CBC8D;
+    }
+
+
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        width: 50%;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px;
+        margin: 10px;
+        font-size: 26px;
+        font-weight: 700;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        outline: none;
+    }
+
+    .button:hover {background-color: #3e8e41}
+
+    .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 9px #666;
+        transform: translateY(4px);
+    }
+
+    .update-button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        width: 40%;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding: 12px;
+        margin: 15px;
+        font-size: 24px;
+        font-weight: 700;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        outline: none;
+    }
+
+    .cancel-button {
+        background-color: tomato;
+        border: none;
+        width: 40%;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        margin: 15px;       
+        font-size: 26px;
+        font-weight: 700;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        outline: none;
+    }
+
+</style>
+
+<body>
+    <form class='formulario' name='data-update-form' id='data-update-form'>
+       
+        <h1>Actualización de datos</h1>
+        <div class='contenedor'>
+            
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="update-first-name" id="update-first-name" placeholder="Primer Nombre, p.ej.: Jonathan" required pattern="[A-ZÁÉÍÓÚÑáéíóúñ][a-záéíóúñ]+" title = "El nombre no debe incluir espacios, ni signos, unicamente letras y la primera letra con mayúscula (Ej.: Jonathan)."/>
+            </div>
+            
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="update-last-name" id="update-last-name" placeholder="Primer Apellido, p.ej.: Caiza" required pattern="[A-ZÁÉÍÓÚÑáéíóúñ][a-záéíóúñ]+" title = "El apellido no debe incluir espacios, ni signos, unicamente letras y la primera letra con mayúscula (Ej.: Caiza)."/>
+            </div>
+
+            <div class="select">
+                <label style="font-weight: bold;">Perteneciente a:</label>
+                <select class="select-item" name="update-memberOf" id="update-memberOf" placeholder="Mimbro de">
+                    <option value="Administrativo EPN">Administrativo EPN</option>
+                    <option value="Ciencias">Ciencias</option>
+                    <option value="Ciencias Administrativas">Ciencias Administrativas</option>
+                    <option value="ESFOT">ESFOT</option>
+                    <option value="Formación Básica">Formación Básica</option>
+                    <option value="Geología y Petroleos">Geología y Petroleos</option>
+                    <option value="Ingeniería Civil y Ambiental">Ingeniería Civil y Ambiental</option>
+                    <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                    <option value="Ingeniería Eléctrica y Electrónica">Ingeniería Eléctrica y Electrónica</option>
+                    <option value="Ingeniería Mecánica">Ingeniería Mecánica</option>
+                    <option value="Ingeniería Química y Agroindustria">Ingeniería Química y Agroindustria</option>
+                </select>
+            </div>
+
+            <div class="select">
+                <label style="font-weight: bold;">Como un:</label>
+                <select class="select-item" name="update-relationshipEpn" id="update-relationshipEpn" placeholder="Tipo de miembro Politécnico">
+                    <option value="Administrativo">Administrativo</option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Profesor">Profesor</option>
+                </select>
+            </div>
+            
+            <div class="select" style="padding: 10px;">
+                <label style="font-weight: bold;">Avatar:  </label>
+                <input type="radio" id="update-polichico-button" name="gender" value="polichico">
+                <label for="polichico">Chico</label>
+                <input type="radio" id="update-polichica-button" name="gender" value="polichica">
+                <label for="polichica">Chica</label>
+            </div>
+
+        </div>
+
+        <div class='select'>
+            <button class='update-button' name='update-button' id='update-button'>Actualizar Datos</button>
+            <button class='cancel-button' name='cancel-button' id='cancel-button'>Cancelar</button>
+        </div>
+
+    </form>
+</body>
